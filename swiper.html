@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            #box {
+                width: 500px;
+                height: 200px;
+                overflow: hidden;
+                position: absolute;
+                left: 30%;
+                top: 100px;
+            }
+            .list {
+                width: 1500px;
+                height: 200px;
+                position: absolute;
+            }
+            .list li {
+                width: 500px;
+                height: 200px;
+                float: left;
+            }
+            .list li img {
+                width: 500px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <ul class="list">
+                <li><img src="./img/1.jpg" alt="" /></li>
+                <li><img src="./img/2.jpg" alt="" /></li>
+                <li><img src="./img/3.jpg" alt="" /></li>
+            </ul>
+        </div>
+        <script src="./index.js"></script>
+        <script>
+            let oList = document.getElementsByClassName('list')[0];
+            let now = 0;
+            setInterval(() => {
+                if (now > 2) {
+                    now = 0;
+                }
+                startMove(oList, { left: -500 * now });
+                now++;
+            }, 1000);
+        </script>
+    </body>
+</html>

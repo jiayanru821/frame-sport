@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            #app {
+                width: 200px;
+                height: 200px;
+                background: rgb(7, 241, 113);
+                position: absolute;
+                top: 100px;
+                opacity: 0.3;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+        <button id="btn">动画</button>
+        <script src="./index.js"></script>
+        <script>
+            let timer = null;
+            let oDiv = document.getElementById('app');
+            let oBtn = document.getElementById('btn');
+            //点击事件
+            oBtn.onclick = function() {
+                startMove(oDiv, { width: 500, height: 400, left: 200, opacity: 100 });
+            };
+        </script>
+    </body>
+</html>
